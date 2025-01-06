@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addTodo(todo) {
         let todoText = input.value;
-        console.log(todoText);
 
         if (todo) {
             todoText = todo.text
