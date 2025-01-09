@@ -2,6 +2,13 @@ body {
     background-color: rgb(129, 27, 218);
 }
 
+button {
+    height: 3rem;
+    width: 3rem;
+    border: 0;
+    cursor: pointer;
+}
+
 .search {
     height: 30rem;
     display: flex;
@@ -14,18 +21,10 @@ body {
     width: 12rem;
     border: 0;
     padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
 }
 
 .active {
-    display: none;
-}
-
-
-
-button {
-    height: 3rem;
-    width: 3rem;
-    border: 0;
-    cursor: pointer;
-
+    width: 0rem !important;
+    padding: 0 !important;
 }
