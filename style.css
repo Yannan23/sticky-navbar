@@ -1,63 +1,30 @@
 body {
+    background-color: rgb(129, 27, 218);
+}
+
+button {
+    height: 3rem;
+    width: 3rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.search {
+    height: 30rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    height: 100%vh;
 }
 
-h1 {
-    font-size: 10rem;
-    color: rgb(180, 147, 212);
-    opacity: 0.5;
+#search-input {
+    height: 3rem;
+    width: 12rem;
+    border: 0;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
 }
 
-input {
-    border: none;
-    height: 4rem;
-    width: 20rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    padding: 0.5rem 2rem;
-    margin: 0 0;
-}
-
-input::placeholder {
-    color: rgba(192, 188, 188, 0.5);
-}
-
-input:focus {
-    outline-color: rgb(213, 68, 243);
-}
-
-.todos {
-    list-style-type: none;
-    background-color: white;
-    padding: 0;
-    margin: 0;
-}
-
-.todos li {
-    height: 4rem;
-    cursor: pointer;
-    padding: 0 1.5rem;
-    border-top: solid 1px rgb(221, 218, 218);
-    font-size: 1.5rem;
-    color: rgb(153, 151, 151);
-    display: flex;
-    align-items: center;
-}
-
-.todos li.completed {
-    color: rgb(158, 156, 156);
-    text-decoration: line-through;
-}
-
-small {
-    color: rgba(166, 165, 165, 0.6);
-    margin: 4rem 1rem;
-    text-align: center;
+.active {
+    width: 0rem !important;
+    padding: 0 !important;
 }
