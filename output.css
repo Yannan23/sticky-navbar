@@ -584,17 +584,11 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
   .isolate {
     isolation: isolate;
   }
   .isolation-auto {
     isolation: auto;
-  }
-  .z-50 {
-    z-index: 50;
   }
   .z-auto {
     z-index: auto;
@@ -701,14 +695,8 @@
       max-width: 96rem !important;
     }
   }
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
   }
   .box-border {
     box-sizing: border-box;
@@ -797,6 +785,12 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-240 {
+    height: calc(var(--spacing) * 240);
+  }
   .h-screen {
     height: 100vh;
   }
@@ -814,6 +808,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-full {
+    width: 100%;
   }
   .w-screen {
     width: 100vw;
@@ -957,6 +954,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -1223,16 +1223,15 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
-    }
-  }
-  .space-x-8 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .space-x-reverse {
@@ -1450,6 +1449,9 @@
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1458,9 +1460,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab,;
@@ -1628,14 +1627,23 @@
   .object-top {
     object-position: top;
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
+  .px-40 {
+    padding-inline: calc(var(--spacing) * 40);
   }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
+  .px-62 {
+    padding-inline: calc(var(--spacing) * 62);
+  }
+  .py-0 {
+    padding-block: calc(var(--spacing) * 0);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
@@ -1679,17 +1687,17 @@
   .align-top {
     vertical-align: top;
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1764,8 +1772,8 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
-  .text-gray-800 {
-    color: var(--color-gray-800);
+  .text-gray-100 {
+    color: var(--color-gray-100);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2210,22 +2218,19 @@
   .transform-view {
     transform-box: view-box;
   }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
+  .hover\:text-red-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-700);
+      }
     }
   }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
+}
+.active {
+  background-color: aliceblue;
+  color: rgb(43, 42, 42);
+  height: 50px;
+  transition: all 0.3s ease-in-out;
 }
 @keyframes spin {
   to {
@@ -2351,10 +2356,6 @@
   initial-value: 0;
 }
 @property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
