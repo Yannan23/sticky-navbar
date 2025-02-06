@@ -1,8 +1,63 @@
-const inputElement = document.getElementById('search-input')
-const searchButton = document.querySelector('button')
-// const search = document.getElementsByClassName('search')
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', fixNav);
 
-searchButton.addEventListener('click', function (event) {
-    inputElement.classList.toggle('active');
-    // input.focus()
-})
+function fixNav() {
+    if (window.scrollY > nav.offsetHeight + 150) {
+        nav.classList.add('active');
+    } else {
+        nav.classList.remove('active');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const nav = document.querySelector('nav')
+// window.addEventListener('scroll', fixNav)
+
+// function fixNav() {
+//     if (window.scrollY > nav.offsetHeight + 150) {
+//         nav.classList.add('active')
+//     } else {
+//         nav.classList.remove('active')
+//     }
+// }
